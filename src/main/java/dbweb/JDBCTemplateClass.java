@@ -24,22 +24,22 @@ public class JDBCTemplateClass {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public void addHero(String id, String name) throws SQLException {
-        this.jdbcTemplate.update("INSERT INTO hero VALUES (?, ?)", id, name);
-    }
-
-    public void deleteHero(String name){
-        this.jdbcTemplate.update("DELETE FROM hero WHERE name LIKE '"+name+"'");
+//    public void addHero(String id, String name) throws SQLException {
+//        this.jdbcTemplate.update("INSERT INTO hero VALUES (?, ?)", id, name);
+//    }
+//
+//    public void deleteHero(String name){
+//        this.jdbcTemplate.update("DELETE FROM hero WHERE name LIKE '"+name+"'");
+//    }
+    
+    public List<Map<String, Object>> getKooditAsList() throws SQLException {
+        return this.jdbcTemplate.queryForList("SELECT * FROM koodisto");
     }
     
-    public List<Map<String, Object>> getHeroesAsList() throws SQLException {
-        return this.jdbcTemplate.queryForList("SELECT * FROM hero");
-    }
-    
-    public void printHeroes(){
-    List<Hero> heroes = this.jdbcTemplate.query("SELECT * FROM hero", new HeroMapper());
-     for(Hero h: heroes) {
-            System.out.println(h.getId() + " " + h.getName());
+    public void printKoodit(){
+    List<Koodisto> koodisto = this.jdbcTemplate.query("SELECT * FROM koodisto", new KoodistoMapper());
+     for(Koodisto k: koodisto) {
+            System.out.println(k.getId() + " " + k.getKuvaus());
         }
 }
 }

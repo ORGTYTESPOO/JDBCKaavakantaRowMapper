@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>JDBCTemplateRowMapper</name>
+    <name>JDBCKaavakantaRowMapper</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -22,14 +22,14 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-  		<groupId>mysql</groupId>
-  		<artifactId>mysql-connector-java</artifactId>
-  		<version>5.1.22</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.3-1104-jdbc41</version>
         </dependency>
         <dependency>
-             <groupId>commons-dbcp</groupId>
-             <artifactId>commons-dbcp</artifactId>
-             <version>1.2.2</version>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.2.2</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -40,6 +40,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>3.1.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.2.12.RELEASE</version>
         </dependency>
     </dependencies>
 

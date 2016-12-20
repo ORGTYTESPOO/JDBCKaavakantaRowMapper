@@ -4,10 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
                            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
+    
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/HEROES"/>
-        <property name="username" value="root" />
-        <property name="password" value="rootpw" />
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://SV-H-T-TIHA-1.espoo.ad.city:5432/ksk"/>
+        <property name="username" value="postgres" />
+        <property name="password" value="postgres" />
     </bean>
 </beans>

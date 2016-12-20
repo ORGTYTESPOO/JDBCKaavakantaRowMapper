@@ -15,18 +15,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class GetHeroesAsListWithRowMapper {
         public static void main(String[] args) throws Exception {        
     
-        String ellie = "Ellie";
+        
         
         ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
         DataSource datasource = (DataSource) appContext.getBean("dataSource");
         
-        JDBCTemplateClass herodb = new JDBCTemplateClass();
-        herodb.setDataSource(datasource); 
+        JDBCTemplateClass koodistodb = new JDBCTemplateClass();
+        koodistodb.setDataSource(datasource); 
         
-        herodb.addHero(null, ellie);
+        
         
         System.out.println("Print heroes");
-        herodb.printHeroes();
+        koodistodb.printKoodit();
             
     }
 }
