@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  * @author saara
  */
-public class GetHeroesAsListWithRowMapper {
+public class GetKoodistoAsListWithRowMapper {
         public static void main(String[] args) throws Exception {        
     
         

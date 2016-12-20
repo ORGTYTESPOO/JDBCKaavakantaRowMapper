@@ -6,9 +6,6 @@
     
     
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://SV-H-T-TIHA-1.espoo.ad.city:5432/ksk"/>
-        <property name="username" value="postgres" />
-        <property name="password" value="postgres" />
+        
     </bean>
 </beans>
